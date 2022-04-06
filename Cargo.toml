@@ -5,7 +5,8 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-wee_alloc = "0.4"
+# wee_alloc = { path = "../wee_alloc/wee_alloc", default-features = false, features = ["extra_assertions", "use_std_for_test_debugging"] }
+wee_alloc = { version = "0.4", default-features = false, features = ["extra_assertions"] }
 
 [profile.release]
 opt-level = 0
